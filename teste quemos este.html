@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos com Pesquisa e Filtro por Tags</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<!-- Barra lateral com os botões de tags -->
+<div class="sidebar">
+    <button id="show-all">Mostrar todas</button>
+    <p> Avós </p>
+    <button class="filter-btn" data-tag="voinha">Ana Maria</button> 
+    <button class="filter-btn" data-tag="voinho">Valdemar</button> 
+    <p> Filhos </p>
+    <button class="filter-btn" data-tag="bedum">Espedita</button>
+    <button class="filter-btn" data-tag="milton">Milton</button>
+    <button class="filter-btn" data-tag="lala">Zenaide</button>
+    <button class="filter-btn" data-tag="cal">Clademar</button>
+    <button class="filter-btn" data-tag="zelia">Maria Zélia</button>
+    <button class="filter-btn" data-tag="mimi">Claudemir</button>
+    <button class="filter-btn" data-tag="api">Api</button>
+    <button class="filter-btn" data-tag="corro">Corro</button>
+    <button class="filter-btn" data-tag="susana">Susana</button>
+    <button class="filter-btn" data-tag="lina">Eulina</button>
+    <button class="filter-btn" data-tag="fal">Fal</button>
+    <button class="filter-btn" data-tag="neco">Manoel</button>
+    <button class="filter-btn" data-tag="anitta">Ana maria</button>
+    <p> Netos </p>
+    <button class="filter-btn" data-tag="fabio">Fábio</button>
+    <button class="filter-btn" data-tag="marcelo">Marcelo</button>
+    <button class="filter-btn" data-tag="carla">Carla</button>
+    <button class="filter-btn" data-tag="kid">Claudia</button>
+    <button class="filter-btn" data-tag="luciano">Luciano</button>
+    <button class="filter-btn" data-tag="paulo">Paulo</button>
+    <button class="filter-btn" data-tag="wagner">Wagner</button>
+    <button class="filter-btn" data-tag="gustavo">Gustavo</button>
+    <button class="filter-btn" data-tag="marcela">Marcela</button>
+    <button class="filter-btn" data-tag="renato">Renato</button>
+    <button class="filter-btn" data-tag="caca">Caca</button>
+    <button class="filter-btn" data-tag="raine">Raine</button>
+    <button class="filter-btn" data-tag="finha">Rafaela</button>
+    <button class="filter-btn" data-tag="tiago">Thiago</button>
+    <button class="filter-btn" data-tag="fernandinha">Fernanda</button>
+    <button class="filter-btn" data-tag="teteu">Matheus</button>
+    <button class="filter-btn" data-tag="sá">Macerlo sá</button>
+    <button class="filter-btn" data-tag="duda">Eduarda</button>
+    <button class="filter-btn" data-tag="bia">Beatriz</button>
+    <button class="filter-btn" data-tag="rafa">Rafael</button>
+    <button class="filter-btn" data-tag="manu">Manuella</button>
+    <button class="filter-btn" data-tag="rodrigo">Rodrigo</button>
+    <button class="filter-btn" data-tag="lele">Letícia</button>
+    <button class="filter-btn" data-tag="julia">Julia</button>
+    <button class="filter-btn" data-tag="alice">Alice</button>
+    <button class="filter-btn" data-tag="emily">Emily</button>
+    <button class="filter-btn" data-tag="davi">Davi</button>
+    <button class="filter-btn" data-tag="tom">Tom</button>
+    <br>
+    <p><a href="Criadora.html" target="_blank">Criadora</a></p> 
+        Criadora
+    </button> 
+ </div>
+
+
+</div>
+
+<!-- Conteúdo principal -->
+<div class="content">
+    <header>
+        <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\Casa de vo.png" alt="Logo">
+        <div class="header1">
+        <h2>Galeria de Fotos</h2>
+        <p>Familia Gomes</p> </div>
+        <div class="header1">
+        <button id="menuToggle" class="hamburger">☰</button></div>
+    </header>
+    
+<div class="search-container">
+        <input type="text" id="search-bar" placeholder="Pesquise por categoria ou pessoa...">
+    </div>
+
+    <div class="gallery" id="gallery">
+         <div class="gallery-item" data-tags="vo,avô,vô,voinha,dona,ana,maria,vo,avó,vó,voinho,valdemar,vava,valdemiro">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha e voinho poltrona.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avô,vô,voinha,dona,ana,maria,vo,avó,vó,voinho,valdemar,vava,valdemiro,kid,kidoria,kidória,negona">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha com kid.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\tia fal e voinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,bone,boné,sport">
+            <img src="imagens/voinha boné sport.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,15,anos,festa,vestido,branco,anitta,aninha,ana,maria">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\- voinha 15 anos ana maria.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,15,anos,festa,vestido,branco">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\15 anos ana maria 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="15,anos,festa,vestido,branco,anitta,aninha,ana,maria">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\15 anos ana maria.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,15,anos,festa,vestido,branco,zélia,zelia,biliu,espedita,expedita,bebe,bébé,encrenca,bedum,suzane">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\15 anos ana maria, zelia,espedita,suzane 2.jpg" >
+        </div>
+        <div class="gallery-item" data-tags="vo,avô,vô,voinha,dona,ana,maria,vo,avó,vó,voinho,valdemar,vava,valdemiro,fal,fatima,lucia,fátima,lúcia,fernandinho,careca,fernando,wagner,beiguera,baiga,bier,beier">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\fal e bebe aniversario - fal,voinha,fernandinho,valdemar.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avô,vô,voinha,dona,ana,maria,vo,avó,vó,voinho,valdemar,vava,valdemiro,fernandinho,careca,fernando,milton,micula,clemilton,api,jose,josé,roberto,zezinho,marcelinha,celinha,marcela">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\fal e bebe aniversario - milton,api,marcela,voinha,fernandinho,valdemar.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avô,vô,voinha,dona,ana,maria,vo,avó,vó,voinho,valdemar,vava,valdemiro,praia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\praia, voinha voinho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avô,vô,voinha,dona,ana,maria,cangaceira">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha cancaceira.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,fal,fatima,lucia,fátima,lúcia,eulina,lina,lilita,layla,dunga">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\tia lina fal e voinha.jpg">
+        </div>  
+        <div class="gallery-item" data-tags="vo,avô,vô,voinho,valdemar,vava,valdemiro,oculos">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho de oculos.jpg">
+        </div>  
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,praia,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha e fal na praia.jpg">
+        </div>  
+        <div class="gallery-item" data-tags="vo,avô,vô,voinha,dona,ana,maria,fal,fatima,lucia,fátima,lúcia,vo,avó,vó,voinho,valdemar,vava,valdemiro">
+            <img src="imagens/voinha e voinho almoçando com tia bebe.jpg">
+        </div>  
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,finha,preta,pirralha,rafinha,rafaela,pi,raine,rá,nen,inhe,raianne,raynne,rayne,carlinha,renato">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha aniversario bolinho simplis- caca finha raine renato.jpg">
+        </div> 
+         <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,finha,preta,pirralha,rafinha,rafaela,pi,raine,rá,nen,inhe,raianne,raynne,rayne,carlinha,renato">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha aniversario bolinho simplis- caca finha raine renato 2.jpg">
+        </div>  
+        <div class="gallery-item" data-tags="vo,avô,vô,voinha,dona,ana,maria,vo,avó,vó,voinho,valdemar,vava,valdemiro,casamento">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha casamento de tia fal meio corpo.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\tia fal e voinha 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,thiago,tiago,tiaguinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha com tiago no colo.jpg"">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,thiago,tiago,tiaguinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha com tiago no colo 3.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,thiago,tiago,tiaguinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha com tiago no colo 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,bandeira,brazil,brasil">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha e bandeira do brasil.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,leticia,letícia,lele,le,lê,lêlê">
+            <img src="imagens/voinha e leticia.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,duda,du,dudis,dudinha,eduarda,fernandinha,preta,ferdanda,nandinha,zinha,caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,teteu,mateu,matheus,joão,teu,sá,sa,thiago,tiago,tiaguinho,espedita,expedita,bebe,bébé,encrenca,bedum">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha e netos, caca, teteu marcelo,duda,fernandinha,tiago, bebe.jpg">
+        </div>
+        <div class="gallery-item" data-tags="teteu,mateu,matheus,joão,teu,vo,avó,vó,voinha,dona,ana,maria">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha e teteu 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="teteu,mateu,matheus,joão,teu,vo,avó,vó,voinha,dona,ana,maria">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha e teteu.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,espedita,expedita,bebe,bébé,encrenca,bedum">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha na igreja.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,espedita,expedita,bebe,bébé,encrenca,bedum,vo,avô,vô,voinho,valdemar,vava,valdemiro,fernandinho,paulo,nininho,eulina,lina,lilita,layla,dunga,zenaide,lala,lálá,zene,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha na igreja - pailo,lina,lala,voinho,fernandinho,bebe,fal.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha no sofá.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,espedita,expedita,bebe,bébé,encrenca,bedum,fal,fatima,lucia,fátima,lúcia,eulina,lina,lilita,layla,dunga">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\festa de fal e bebe voinha e lina.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,espedita,expedita,bebe,bébé,encrenca,bedum,zélia,zelia,biliu,nick">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha no segundo andar vestudo azul escuro.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha no segundo andar vestudo azul escuro 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro,fal,fatima,lucia,fátima,lúcia">
+            <img src="imagens/voinha praia em roupas de banho 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinha praia em roupas de banho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\tia fal voinha e voinho sala.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avô,vô,voinho,valdemar,vava,valdemiro">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho de cangaceiro.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha casa.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha casa 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha casa 3.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha viajem floresta.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha viajem floresta 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha na praia.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha na praia 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro,fal,fatima,lucia,fátima,lúcia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha em uma viajem.jpg">
+        </div>
+        <div class="gallery-item" data-tags="vo,avó,vó,voinha,dona,ana,maria,vo,avô,vô,voinho,valdemar,vava,valdemiro,fal,fatima,lucia,fátima,lúcia,espedita,expedita,bebe,bébé,encrenca,bedum">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens\voinho e voinha em uma viajem bebe e lucia.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,aninha,ana,maria,carla,donda,tatiane,marcelo,sá,celinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\ana maria, sá, carla.jpg">
+        </div>
+        <div class="gallery-item" data-tags="marcelo,sá,celinho,anitta,aninha,ana,maria,raine,rá,nen,inhe,raianne,raynne,rayne,carlinha,finha,preta,pirralha,rafinha,rafaela,pi,teteu,mateu,matheus,joão,teu,fernandão,bigode">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\ana maria,marcelo,raine,rafinha,teteu,fernandão.jpg">
+        </div>
+        <div class="gallery-item" data-tags="angela,ângela,suzane,suzana">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\angela,suzana.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,aninha,ana,maria,marcelo,sá,celinho,vicente,eulina,lina,lilita,layla,dunga,fernandinha,preta,ferdanda,nandinha,zinha,fernandinho,careca,bilola,fernandão,bigode">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\anitta,marcelo,eulina,vicente,fernandinha,fernandinho,fernandão.jpg">
+        </div>
+        <div class="gallery-item" data-tags="api,jose,josé,roberto,zezinho,corro,socorrinho,socorro,corrinho,coca,anitta,aninha,ana,maria,marcelo,sá,celinho,vicente,eulina,lina,lilita,layla,dunga,fernandinha,preta,ferdanda,nandinha,zinha,felix,félix,caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,thiago,tiago,tiaguinho,teteu,mateu,matheus,joão,teu,fernandão,bigode">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\api,corro,tiago,anamatia,marcelosá,fernando,caca,teteu,raine,rafinha,felix.jpg">
+        </div>
+        <div class="gallery-item" data-tags="bia,bi,bibi,biazinha,biloca,biloka,fernandinho,careca,bilola,fernandão,bigode,duda,du,dudis,dudinha,eduarda">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\bia,fernandão,fernandinho,duda.jpg">
+        </div>
+        <div class="gallery-item" data-tags="bia,bi,bibi,biazinha,biloca,biloka,fernandinho,careca,bilola,fernandão,bigode,anitta,aninha,ana,maria,fernandinha,preta,ferdanda,nandinha,zinha,zenaide,lala,lálá,zene,claudemir,mimi,marcelo,sá,celinho.">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\bia,fernandçao,fernandinho,anamaria,fernandinha,lala,mimi,marcelo.jpg">
+        </div>
+         <div class="gallery-item" data-tags="bia,bi,bibi,biazinha,biloca,biloka,fernandinha,preta,ferdanda,nandinha,zinha,marcelo,sá,celinho,teteu,mateu,matheus,joão,teu,thiago,tiago,tiaguinho,corro,socorrinho,socorro,corrinho,coca">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\bia,fernandinha,marcelo,sá,tiago,teteu,corro.jpg">
+        </div>
+        <div class="gallery-item" data-tags="bia,bi,bibi,biazinha,biloca,biloka,finha,preta,pirralha,rafinha,rafaela,pi,duda,du,dudis,dudinha,eduarda,rafael,rafaie,rafa,fernandinho,careca,bilola">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\bia,rafinha,duda,fernandinho,rafa.jpg">
+        </div>
+         <div class="gallery-item" data-tags="bia,bi,bibi,biazinha,biloca,biloka,finha,preta,pirralha,rafinha,rafaela,pi,duda,du,dudis,dudinha,eduarda,rafael,rafaie,rafa,fernandinho,careca,bilola,fernandinha,preta,ferdanda,nandinha,zinha,teteu,mateu,matheus,joão,teu,carla,donda,tatiane">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\bia,rafinha,fernandinha,duda,carla,rafael,fernandinho,teteu.jpg">
+        </div>
+        <div class="gallery-item" data-tags="bia,bi,bibi,biazinha,biloca,biloka,finha,preta,pirralha,rafinha,rafaela,pi,duda,du,dudis,dudinha,eduarda,teteu,mateu,matheus,joão,teu,fernandinho,careca,bilola,fernandinha,preta,ferdanda,nandinha,zinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\bia,rafinha,teteu,fernandinha,duda,fernandinho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,fernandinha,preta,ferdanda,nandinha,zinha,teteu,mateu,matheus,joão,teu,thiago,tiago,tiaguinho,angela,ângela">
+            <img src="familaigomes pdf\caca, fernandinha tiago teteu, angela.jpg">
+        </div>
+        <div class="gallery-item" data-tags="caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,bia,bi,bibi,biazinha,biloca,biloka,teteu,mateu,matheus,joão,teu,marcelo,sá,celinho,duda,du,dudis,dudinha,eduarda,eulina,lina,lilita,layla,dunga,finha,preta,pirralha,rafinha,rafaela,pi,fernandinha,preta,ferdanda,nandinha,zinha,thiago,tiago,tiaguinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\caca,bia,teteu,marcelo,duda,eulina,rafinha,fernandinha,tiago.jpg">
+        </div>
+        <div class="gallery-item" data-tags="caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,raine,rá,nen,inhe,raianne,raynne,rayne,carlinhafernandinha,preta,ferdanda,nandinha,zinha,eulina,lina,lilita,layla,dunga,finha,preta,pirralha,rafinha,rafaela,pi,marcelo,sá,celinho,fernandão,bigode">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\caca,raine,fernandinha,eulina,finha,marcelosa,fernandão.jpg">
+        </div>
+        <div class="gallery-item" data-tags="caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,teteu,mateu,matheus,joão,teu,marcelo,sá,celinho,duda,du,dudis,dudinha,eduarda,eulina,lina,lilita,layla,dunga,finha,preta,pirralha,rafinha,rafaela,pi,fernandinha,preta,ferdanda,nandinha,zinha,thiago,tiago,tiaguinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\caca,tateu,marcelo,duda,eulina,rafaela,fernandinha,tiago.jpg">
+        </div>
+        <div class="gallery-item" data-tags="carla,donda,tatiane,fernandão,bigode,anitta,aninha,ana,maria">
+            <img src="familaigomes pdf\carla,fernandão,anamaria.jpg">
+        </div>
+        <div class="gallery-item" data-tags="carla,donda,tatiane,marcelo,sá,celinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\carla,marcelo.jpg">
+        </div>
+        <div class="gallery-item" data-tags="carla,donda,tatiane,marcelo,sá,celinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\carla,marcelosá.jpg">
+        </div>
+        <div class="gallery-item" data-tags="corro,socorrinho,socorro,corrinho,coca,vo,avó,vó,voinha,dona,ana,maria,fernandinha,preta,ferdanda,nandinha,zinha,susana,su,teteu,mateu,matheus,joão,teu,thiago,tiago,tiaguinho,api,jose,josé,roberto,zezinho,caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,raine,rá,nen,inhe,raianne,raynne,rayne,carlinha,finha,preta,pirralha,rafinha,rafaela,pi">
+            <img src="familaigomes pdf/corro,fernandinha,vi,macelosa,suzanateteu,tiago,api,caca,raine,rafinha,voinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="duda,du,dudis,dudinha,eduarda,bia,bi,bibi,biazinha,biloca,biloka,batizado">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\duda,bia batizado.jpg">
+        </div>
+        <div class="gallery-item" data-tags="duda,du,dudis,dudinha,eduarda,fernandinha,preta,ferdanda,nandinha,zinha,teteu,mateu,matheus,joão,teu,thiago,tiago,tiaguinho,caca,cácá,cacá,kaka,káká,kaká,cazinha,ca,catarina,raine,rá,nen,inhe,raianne,raynne,rayne,carlinha,finha,preta,pirralha,rafinha,rafaela,pi,marcelo,sá,celinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\duda,caca,fernandinha,tiago,marcelosá,teteu,rafinha,raine.jpg">
+        </div>
+         <div class="gallery-item" data-tags="duda,du,dudis,dudinha,eduarda,bia,bi,bibi,biazinha,biloca,biloka,eulina,lina,lilita,layla,dunga,teteu,mateu,matheus,joão,teu,fernandinha,preta,ferdanda,nandinha,zinha,marcelo,sá,celinho,thiago,tiago,tiaguinho,fernandão,bigode,carla,donda,tatiane,rafael,rafaie,rafa">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\duda,eulina,teteu,fernandinha,marcelosa,tiago,bia,fernandão,carla,rafa.jpg">
+        </div>
+        <div class="gallery-item" data-tags="eulina,lina,lilita,layla,dunga,teteu,mateu,matheus,joão,teu,fernandinha,preta,ferdanda,nandinha,zinha,marcelo,sá,celinho,thiago,tiago,tiaguinho,duda,du,dudis,dudinha,finha,preta,pirralha,rafinha,rafaela,pi">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\eulina,duda,fernandinha,tiago,teteu,marcelo,rafinha.jpg">
+        </div>
+         <div class="gallery-item" data-tags="fal,tiago,sá">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\fal,marcelinho,tiago.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinha,marcela,tiago,teteu,sá">
+            <img src="familaigomes pdf\fernandinha,marcela,tiago,teteu,marcelosá.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinha,sá,teteu">
+            <img src="familaigomes pdf\fernandinha,marcelosá,teteu.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinho,lina,anitta,casamento">
+            <img src="familaigomes pdf\fernandinho eulina anitta,casamento.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinho,fernandão,caca,sá,fernandinha,anitta">
+            <img src="familaigomes pdf\fernandinho,fernandão,caca,marcelo,fernandinha,anamaria.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinha,fernandinho,sá,fernandão,vicente">
+            <img src="familaigomes pdf\fernandinho,fernanidnha,marcelosá,fernandão,vicente.jpg">
+        </div>
+        <div class="gallery-item" data-tags="finha,caca">
+            <img src="familaigomes pdf\finha caca.jpg">
+        </div>
+        <div class="gallery-item" data-tags="gustavo,felix">
+            <img src="familaigomes pdf\gustavo,felix.jpg">
+        </div>
+        <div class="gallery-item" data-tags="api">
+            <img src="familaigomes pdf\just api.jpg">
+        </div>
+        <div class="gallery-item" data-tags="lala,bia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\lala,bia,joãocarlos,mimi.jpg">
+        </div>
+        <div class="gallery-item" data-tags="lala,teteu,via,mimi,sá,fernandinha,tiago,rafa">
+            <img src="familaigomes pdf/lala,teteu,bia,claudemir,marcelo,fernandinha,tiago,rafa.jpg">
+        </div>
+        <div class="gallery-item" data-tags="sá,fernandinha,tiago">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\marcelo,fernandinha,tiago.jpg">
+        </div>
+        <div class="gallery-item" data-tags="sá,tiago,fernandinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\marcelo,tiago,fernandinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="sá,tiago,fernandinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\marcelosá,tiago,fernandinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="finha,sá">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\rafaela e criança,marcelo.jpg">
+        </div>
+        <div class="gallery-item" data-tags="finha,raine,fernandinha,teteu,lina,sá,anitta">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\rafaela,raine,fernandinha,teteu,eulina,marcelosá,anitta.jpg">
+        </div>
+        <div class="gallery-item" data-tags="finha,caca,fernandinha,sá,teteu,tiago">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\rafinha,caca,fernandinha,marcelosá,teteu,tiago.jpg">
+        </div>
+        <div class="gallery-item" data-tags="rafinha,fernandinha,caca,raine">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\rafinha,fernandinha,caca,raine.jpg">
+        </div>
+        <div class="gallery-item" data-tags="raine,anitta,sá,teteu,fernandinha,lina,caca,finha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\raine,anamaria,marcelosá,teteu,fernandinha,eulina,caca,finha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="susana,felix,anitta">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\su,felix,anitta.jpg">
+        </div>
+        <div class="gallery-item" data-tags="susana,teteu,raine,caca,finha,sá,anitta,angela,tiago,fernandinha,marcela">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\susana,teteu,raine,caca,finha,marcelosa,anitta,angela,tiago,fernandinha,marcela.jpg">
+        </div>
+        <div class="gallery-item" data-tags="teteu,bia,duda,sá,fernandinha,tiago">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\teteu,duda,bia,marcelosá,fernandinha,tiago.jpg">
+        </div>
+        <div class="gallery-item" data-tags="teteu,corro,fernandinha,anitta,fernandão,raine,caca,finha,felix">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\teute,corro,fernandinha,anamaria,fernandão,rainhe,caca,rafaela,teteu,felix.jpg">
+        </div>
+        <div class="gallery-item" data-tags="tiago,api,corro,fernandinha,anitta,sá,raine,caca,finha,fernandão,susuna,teteu">
+            <img src="familaigomes pdf/tiago,api,corro,fernandinha,anamaria,marcello,raine,caca,finha,fernandão,susana,teteu.jpg">
+        </div>
+        <div class="gallery-item" data-tags="tiago,teteu,sá,fernandinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\tiago,teteu,marcelo,fernandinha bibite 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="tiago,teteu,sá,fernandinha">
+            <img src="familaigomes pdf/tiago,teteu,marcelo,fernandinha bibite.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,voinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\vava, anitta.jpg">
+        </div>
+        <div class="gallery-item" data-tags="voinho,corro,sá,anitta">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\vava,corro,marcelosá,anitta.jpg">
+        </div>
+        <div class="gallery-item" data-tags="voinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\voinha sentadinha muro alto.jpg">
+        </div>
+        <div class="gallery-item" data-tags="voinha,fal,susana">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\voinha,fal,susana.jpg">
+        </div>
+        <div class="gallery-item" data-tags="voinha,tiago,sá,teteu">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\familaigomes pdf\voinha,fiago,marcelo,teteu.jpg"> 
+        </div>
+        <div class="gallery-item" data-tags="anitta,fernandão,marcelinho,caca,finha,susana,teteu">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\anitta,fernandão,marcelo,caca,finha,su,teteu.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,fernandão,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\anitta,fernandão,marcelo.jpg">
+        </div>
+        <div class="gallery-item" data-tags="bia,fernandinho,fernandão,fernandinha,lina,marcelinho,lala,mimi,duda">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\bia,fernandinho,fernandão,fernandinha,eulina,marcelinho,lala,mimi,duda.jpg">
+        </div>
+        <div class="gallery-item" data-tags="lina,anitta,fernandão,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\eulina,anitta,fernandão,marcelo.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandão,anitta,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\fernandão,anitta,marcelo.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandão,marcelinho,vicente,fernandinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\fernandão,marcelo,vicente,fernandinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinha,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\fernandinha,marcelinho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinha,teteu,marcelinho,tiago">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\fernandinha,teteu,marcelo,tiago.jpg">
+        </div>
+        <div class="gallery-item" data-tags="joãocarlos,anitta,fernandão,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\joãocarlos,anitta,fernandão,marcelo.jpg">
+        </div>
+        <div class="gallery-item" data-tags="marcelinho,fernandinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\marcelinho,fenandinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="mimi,bia">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\mimi,bia.jpg">
+        </div>
+        <div class="gallery-item" data-tags="neco,anitta,voinha,teteu">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\neco,anitta,voinha,teteu.jpg">
+        </div>
+        <div class="gallery-item" data-tags="susana,rose,anitta">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\susana,rose,anitta.jpg">
+        </div>
+        <div class="gallery-item" data-tags="teteu,finha,fernandinha,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\teteu,finha,fernandinha,marcelho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="teteu,marcelinho,fernandinha,fernandinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_123409\teteu,marcelo,fernandinha,fernandinho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,fal,voinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_125955\anitta,fal,voinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,joãocarlos">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_125955\anitta,joãocarlos.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,mimi,bia,fernandão">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_125955\anitta,mimi,bia,fernadão.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fenandinha,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_125955\fernandinha,marcelinho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinha,tiago,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_125955\fernandinha,tiago,marcelinho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="finha,tiago,marcelinho,fernadão,anitta,teteu,raine">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_125955\finha,tiago,marcelinho,fernandão,anitta,teteu,raine.jpg">
+        </div>
+        <div class="gallery-item" data-tags="teteu,fernandinha,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_125955\teteu,fernandinha,marcelinho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,fernadão">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\anitta,fernadão,casamento.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,fernadão,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\anitta,fernandão,marcelo.jpg">
+        </div>
+        <div class="gallery-item" data-tags="anitta,finha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\anitta,finha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="caca,bia,tiago,marcelinho,teteu,duda,finha,fernandinha,eulina">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\caca,bia,tiago,marcelinho,teteu,duda,finha,fernanfinha,eulina.jpg">
+        </div>
+        <div class="gallery-item" data-tags="caca,finha,fernandinha,tiago,teteu,rafa,carla,bia,fernandão">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\caca,finha,fernandinha,tiago,teteu,rafa,carla,bia,fernandão.jpg">
+        </div>
+        <div class="gallery-item" data-tags="duda,caca,fernandinha,tiago,marcelinho,finha,raine">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\duda,caca,fernandinha,tiago,marcelo,finha,raine 2.jpg">
+        </div>
+        <div class="gallery-item" data-tags="duda,caca,fernandinha,tiago,marcelinho,finha,raine">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\duda,caca,fernandinha,tiago,marcelo,finha,raine.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernadão,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\fernandão,marcelino.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinha,marcelinho">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\fernandinha,marcelinho.jpg">
+        </div>
+        <div class="gallery-item" data-tags="fernandinho,lina">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\fernandinho,lina.jpg">
+        </div>
+        <div class="gallery-item" data-tags="finha,marcelo,teteu,fernandão,anitta">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\finha,marcelo,teteu,fernandão,anitta.jpg">
+        </div>
+        <div class="gallery-item" data-tags="marcelinho,fernandinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\marcelinho,fernandinha.jpg">
+        </div>
+        <div class="gallery-item" data-tags="rafa,carla,bia,marcelinho,tiago,fernandinha,teteu,lina,duda,anitta,fernandão">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\rafa,carla,bia,marcelo,tiago,fernandinha,teteu,eulina,duda,anita,fernandão.jpg">
+        </div>
+        <div class="gallery-item" data-tags="voinha">
+            <img src="C:\Users\anabi\OneDrive\Documentos\teste html\imagens diveasas\pacote 1\2024-12-04_133512\voinha.jpg">
+        </div>
+
+
+        <!-- Outros itens da galeria... -->
+    </div>
+
+    <div class="no-results" id="no-results" style="display: none;">
+        Nenhuma imagem encontrada para essa pesquisa.
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="imageModal" class="modal">
+    <span class="modal-close" id="closeModal">&times;</span>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Imagem ampliada">
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

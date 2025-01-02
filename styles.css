@@ -1,0 +1,342 @@
+body {
+    font-family: "Mogra", system-ui;
+    background-color: #F9ECDB;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    overflow-x: hidden;
+    transition: padding-left 0.3s ease;
+    padding-left: 250px; /* Espaço para a sidebar fixa no lado esquerdo */
+}
+
+header {
+    display: flex;
+    background-color: #333B18;
+    color: #F9ECDB;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.header1 {
+   align-items: left;
+   padding-left: 10px;
+}
+.header1 {
+    align-items: right;
+ }
+
+header img {
+    height: 100px;
+}
+
+/* Sidebar no lado esquerdo */
+.sidebar {
+    width: 250px;
+    background-color: #333B18;
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    padding-left: 20px;
+    overflow-y: auto;
+    padding-right: 10px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+/* Ocultar sidebar ao lado esquerdo */
+.sidebar-hidden {
+    transform: translateX(-100%);
+}
+
+/* Conteúdo principal */
+.content {
+    padding: 20px;
+    width: 100%;
+    transition: margin-left 0.3s ease;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+/* Ajusta o espaço à esquerda quando a sidebar está visível */
+body.sidebar-hidden {
+    padding-left: 0;
+}
+
+/* Botões na sidebar */
+.sidebar button {
+    font-family: "Kavivanar", cursive;
+    display: block;
+    background-color: #4D5825;
+    color: #F9ECDB;
+    padding: 15px;
+    margin: 10px -10px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.sidebar button.active {
+    background-color: #F9ECDB;
+    color: #4D5825;
+}
+
+.sidebar button:hover {
+    background-color: #555;
+    color: white;
+}
+
+.sidebar button:focus {
+    outline: 3px solid #F9ECDB;
+    outline-offset: 2px;
+}
+
+a {
+    color: white; /* Define a cor do texto como branca */
+    font-size: 13px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Barra de pesquisa */
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Galeria de imagens */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    transition: margin-left 0.3s ease;
+}
+
+.gallery-item {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.no-results {
+    text-align: center;
+    font-size: 18px;
+    color: #E7AE62;
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+}
+
+.modal img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 800px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background-color: #5B682B;
+    border: none;
+    border-radius: 20%;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal-close:focus {
+    outline: 3px solid #F9ECDB;
+    outline-offset: 2px;
+}
+
+/* Barra de rolagem verde */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #5B682B;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F9ECDB;
+    border-radius: 6px;
+}
+
+/* Exibir botão hambúrguer apenas em telas pequenas */
+.hamburger {
+    display: block;
+    background-color: #4D5825;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+/* Media query para telas maiores que 768px */
+@media (min-width: 768px) {
+    .hamburger {
+        display: none; /* Oculta o botão hambúrguer em telas grandes */
+    }
+}
+
+/* Media query para telas menores: sidebar retrátil */
+@media (max-width: 768px) {
+    
+    .sidebar {
+        width: 200px;
+        transform: translateX(-100%);
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .sidebar-hidden {
+        transform: translateX(0);
+    }
+    .gallery-item {
+        width: 120px;
+        height: 120px;
+    }
+
+    .search-container input {
+        width: 100%;
+        font-size: 16px;
+    }
+    .gallery {
+        gap: 10px;
+    }
+    body {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding-right: 20px;
+    }
+
+    header img {
+        height: 80px;
+    }
+
+    .sidebar {
+        width: 150px;
+    }
+
+    body {
+        padding-left: 0;
+    }
+
+    .gallery-item {
+        width: 90px;
+        height: 90px;
+    }
+
+    .search-container input {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .gallery {
+        gap: 5px;
+    }
+}
+
+/* Media Query para telas muito pequenas (até 300px) */
+@media (max-width: 300px) {
+    .sidebar {
+        width: 80px;
+    }
+    header1{font-size: 10px;}
+
+    header img {
+        height: 60px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .gallery-item {
+        width: 70px;
+        height: 70px;
+    }
+
+    .search-container input {
+        width: 85%;
+        font-size: 12px;
+    }
+
+    .modal-close {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .hamburger {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
