@@ -18,7 +18,7 @@ menuToggle.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-hidden');  // Exibe/oculta a sidebar
     content.classList.toggle('sidebar-visible'); // Ajusta o conteúdo quando a sidebar está visível
 });
-// Mapa de tradução
+
 // Mapa de tradução
 const translationMap = {
     espedita: "bedum",
