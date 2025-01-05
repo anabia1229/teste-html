@@ -18,9 +18,7 @@ menuToggle.addEventListener('click', () => {
     sidebar.classList.toggle('sidebar-hidden');  // Exibe/oculta a sidebar
     content.classList.toggle('sidebar-visible'); // Ajusta o conteúdo quando a sidebar está visível
 });
-
-
-
+// Mapa de tradução
 // Mapa de tradução
 const translationMap = {
     espedita: "bedum",
@@ -156,7 +154,7 @@ function translateWord(word) {
 
 // Função para filtrar imagens com base na pesquisa
 searchBar.addEventListener('input', function () {
-    const searchQuery = searchBar.value.toLowerCase();
+    const searchQuery = searchBar.value.trim().toLowerCase(); // Remove espaços extras e transforma para minúsculas
     const translatedQuery = translateWord(searchQuery); // Traduz a palavra da pesquisa
     const items = gallery.getElementsByClassName('gallery-item');
     let found = false;
