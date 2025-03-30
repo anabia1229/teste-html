@@ -8,6 +8,7 @@ const modal = document.getElementById('imageModal');
 const modalImage = document.getElementById('modalImage');
 const closeModal = document.getElementById('closeModal');
 
+
 // Toggle menu retrátil
 const menuToggle = document.getElementById('menuToggle'); // Botão de hamburguer
 const sidebar = document.querySelector('.sidebar');
@@ -247,13 +248,48 @@ window.addEventListener('click', function (event) {
         modal.style.display = 'none';
     }
 });
-// Navegar entre as imagens
-prevBtn.addEventListener('click', function () {
-    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
-    modalImage.src = galleryItems[currentIndex].src;
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const prevBtn = document.getElementById("prev");
+    const nextBtn = document.getElementById("next");
+    const closeModal = document.getElementById("closeModal");
+    let currentIndex = 0;
+
+    function getVisibleImages() {
+        return Array.from(document.querySelectorAll(".gallery-item img"))
+            .filter(img => img.closest(".gallery-item").style.display !== "none");
+    }
+
+    document.querySelectorAll(".gallery-item img").forEach(img => {
+        img.addEventListener("click", function () {
+            const visibleImages = getVisibleImages();
+            currentIndex = visibleImages.indexOf(this);
+            if (currentIndex !== -1) {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        });
+    });
+
+    prevBtn.addEventListener("click", function () {
+        const visibleImages = getVisibleImages();
+        if (visibleImages.length > 0) {
+            currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
+            modalImg.src = visibleImages[currentIndex].src;
+        }
+    });
+
+    nextBtn.addEventListener("click", function () {
+        const visibleImages = getVisibleImages();
+        if (visibleImages.length > 0) {
+            currentIndex = (currentIndex + 1) % visibleImages.length;
+            modalImg.src = visibleImages[currentIndex].src;
+        }
+    });
+
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
 });
 
-nextBtn.addEventListener('click', function () {
-    currentIndex = (currentIndex + 1) % galleryItems.length;
-    modalImage.src = galleryItems[currentIndex].src;
-});

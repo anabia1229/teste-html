@@ -232,8 +232,30 @@ a {
     right: 20px;
     z-index: 2;
 }
-#prev { left: 10%; }
-#next { right: 10%; }
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}
 /* Media query para telas maiores que 768px */
 @media (min-width: 768px) {
     .hamburger {
