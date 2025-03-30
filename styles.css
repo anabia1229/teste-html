@@ -232,7 +232,8 @@ a {
     right: 20px;
     z-index: 2;
 }
-
+#prev { left: 10%; }
+#next { right: 10%; }
 /* Media query para telas maiores que 768px */
 @media (min-width: 768px) {
     .hamburger {

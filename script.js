@@ -247,3 +247,13 @@ window.addEventListener('click', function (event) {
         modal.style.display = 'none';
     }
 });
+// Navegar entre as imagens
+prevBtn.addEventListener('click', function () {
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    modalImage.src = galleryItems[currentIndex].src;
+});
+
+nextBtn.addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    modalImage.src = galleryItems[currentIndex].src;
+});
